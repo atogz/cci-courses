@@ -17,6 +17,10 @@ export default {
 </script>
 
 <style>
+    @font-face {
+        font-family: "Rubik";
+        src: url("assets/fonts/Rubik-Regular.ttf") format("ttf");
+    }
     html, body {
         height: 100%;
     }
@@ -24,15 +28,16 @@ export default {
     body {
         display: flex;
         flex-direction: column;
-        color: #354052;
-        background-color: #f5f7fb
+        color: #413d58;
+        background-color: #f5f7fb;
+        font-family: 'Rubik', 'Roboto', sans-serif;
     }
     button, a {
         outline: none !important;
     }
 
     .router-link-active {
-        color: green;
+        color: #fa5f55;
     }
 
 
