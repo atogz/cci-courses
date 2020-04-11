@@ -1,11 +1,11 @@
 <template>
-    <h1>О проекте</h1>
+    <h1>Контакты</h1>
 </template>
 
 
 <script>
   export default {
-    name: "About"
+    name: "Contacts"
   }
 </script>
 

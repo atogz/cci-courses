@@ -2,8 +2,13 @@
     <div>homepage</div>
 </template>
 
-<script>
 
+<style>
+
+</style>
+
+
+<script>
 export default {
   name: 'Home',
   components: {

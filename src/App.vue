@@ -17,13 +17,27 @@ export default {
 </script>
 
 <style>
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        color: #354052;
+        background-color: #f5f7fb
+    }
     button, a {
         outline: none !important;
     }
 
+    .router-link-active {
+        color: green;
+    }
+
 
     /* transitions */
-    
+
     .component-fade-enter-active {
         transition: opacity .3s ease;
     }

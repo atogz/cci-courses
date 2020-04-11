@@ -1,6 +1,10 @@
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "accentColor": "green"
+      }
+    },
   },
   variants: {},
   plugins: [],
