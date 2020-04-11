@@ -1,5 +1,3 @@
 <template>
-  <div class="about bg-gray-200">
-    <h1>This is an about page</h1>
-  </div>
+    <h1>О проекте</h1>
 </template>
