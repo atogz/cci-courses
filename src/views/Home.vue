@@ -7,9 +7,9 @@
                 <h3 class="text-xl text-mainColor-lighter">
                     Иностранные языки, коммуникации, программирование, и многое другое...
                 </h3>
-
             </div>
 
+            <CoursesGrid/>
         </div>
 </template>
 
@@ -20,10 +20,13 @@
 
 
 <script>
+
+import CoursesGrid from "../components/CoursesGrid.vue";
+
 export default {
   name: 'Home',
   components: {
-
+    CoursesGrid
   }
 }
 </script>
