@@ -5,7 +5,7 @@
                     Обучающие курсы для команды <a class="font-bold hover:underline" target="_blank" href="https://coral.club">Coral Club</a>. Актуальные темы. Регулярные занятия.
                 </h2>
                 <h3 class="text-xl text-mainColor-lighter">
-                    Иностранные языки, коммуникации, программирование, и многое другое...
+                    Работа в соцсетях, коммуникации, программирование, и многое другое...
                 </h3>
             </div>
 
