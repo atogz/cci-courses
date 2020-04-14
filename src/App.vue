@@ -27,19 +27,21 @@ export default {
     }
     html, body {
         height: 100%;
+        margin: 0;
     }
-
     body {
-        display: flex;
-        flex-direction: column;
         color: #413d58;
         background-color: #f5f7fb;
         font-family: 'Rubik', 'Roboto', sans-serif;
     }
+    #app {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     button, a {
         outline: none !important;
     }
-
     .router-link-active {
         color: #fa5f55;
     }
