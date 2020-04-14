@@ -42,7 +42,7 @@
           },
           {
             id: 4,
-            name: 'T-SQL.',
+            name: 'T-SQL',
             description: 'Начальных знаний не требуется. Достаточно иметь желание научиться работать с базами данных SQL.',
             backgroundImage: require('../assets/img/t-sql.png')
           },
