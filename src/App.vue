@@ -39,6 +39,13 @@ export default {
         display: flex;
         flex-direction: column;
     }
+    @media screen and (min-width: 1400px) {
+        .container {
+            width: 1600px;
+            margin: auto;
+        }
+    }
+
     button, a {
         outline: none !important;
     }
