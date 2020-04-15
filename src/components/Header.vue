@@ -5,9 +5,9 @@
                 <router-link to="/">
                     <img src="../assets/img/logo.png">
                 </router-link>
-                <div class="ml-8" @click="toggleCoursesMenu" v-on-clickaway="toggleCoursesMenu">
-                    <span class="course-toggle text-mainColor-lighter hover:text-accentColor cursor-pointer">Выберите курс</span>
-                    <div class="whitespace-no-wrap flex flex-col absolute bg-white border border-gray-300 w-auto mt-2" v-if="showCoursesMenu">
+                <div class="ml-8">
+                    <span class="course-toggle text-mainColor-lighter hover:text-accentColor cursor-pointer" @click="showCoursesMenu" v-on-clickaway="hideCoursesMenu">Выберите курс</span>
+                    <div class="whitespace-no-wrap flex flex-col absolute bg-white border border-gray-300 w-auto mt-2" v-if="coursesMenuVisible">
                         <div id="dropdown-arrow" class="border-t border-gray-300 border-l"></div>
                         <router-link to="/courses" class="py-2 px-4 mt-2 transition duration-300 ease-in-out hover:bg-gray-300">Социальные сети</router-link>
                         <router-link to="/courses" class="py-2 px-4 mt-2 transition duration-300 ease-in-out hover:bg-gray-300">Смартфоны</router-link>
@@ -30,12 +30,15 @@
     name: "Header.vue",
     data() {
       return {
-        showCoursesMenu: false
+        coursesMenuVisible: false
       }
     },
     methods: {
-      toggleCoursesMenu() {
-        this.showCoursesMenu = !this.showCoursesMenu;
+      showCoursesMenu() {
+        if(!this.coursesMenuVisible) this.coursesMenuVisible = true;
+      },
+      hideCoursesMenu() {
+        if(this.coursesMenuVisible) this.coursesMenuVisible = false;
       },
     }
   }
