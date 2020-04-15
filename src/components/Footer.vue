@@ -18,5 +18,7 @@
 </script>
 
 <style scoped>
-
+ footer {
+     margin-top: auto;
+ }
 </style>
