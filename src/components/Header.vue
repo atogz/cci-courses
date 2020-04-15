@@ -5,7 +5,7 @@
                 <router-link to="/">
                     <img src="../assets/img/logo.png">
                 </router-link>
-                <div class="ml-8" @click="showCoursesMenu = true" v-on-clickaway="hideShowCoursesMenu">
+                <div class="ml-8" @click="toggleCoursesMenu" v-on-clickaway="toggleCoursesMenu">
                     <span class="course-toggle text-mainColor-lighter hover:text-accentColor cursor-pointer">Выберите курс</span>
                     <div class="whitespace-no-wrap flex flex-col absolute bg-white border border-gray-300 w-auto mt-2" v-if="showCoursesMenu">
                         <div id="dropdown-arrow" class="border-t border-gray-300 border-l"></div>
@@ -34,9 +34,9 @@
       }
     },
     methods: {
-      hideShowCoursesMenu() {
-        this.showCoursesMenu = false;
-      }
+      toggleCoursesMenu() {
+        this.showCoursesMenu = !this.showCoursesMenu;
+      },
     }
   }
 </script>
