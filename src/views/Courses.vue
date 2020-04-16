@@ -1,5 +1,6 @@
 <template>
     <CoursesGrid />
+    1
 </template>
 
 
