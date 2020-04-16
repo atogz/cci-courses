@@ -1,9 +1,17 @@
 <template>
     <div class="w-full p-4">
-        <div class="text-left mb-6">
-            <span class="text-xl font-bold">Курс "{{ courseData.name }}"</span>
+        <div class="w-full flex justify-center">
+            <div class="px-6 py-4 flex flex-col justify-center">
+                <h3 class="text-4xl">Курс "{{ courseData.name }}"</h3>
+                <div class="w-1/2 mx-auto bg-accentColor text-center  mt-4 py-2 text-white rounded cursor-pointer transition duration-300 ease-in-out hover:opacity-75"
+                    @click="toggleVisibleContent"
+                    v-if="!showSubscribeForm">Записаться</div>
+                <div class="w-1/2 mx-auto bg-accentColor text-center  mt-4 py-2 text-white rounded cursor-pointer transition duration-300 ease-in-out hover:opacity-75"
+                     @click="toggleVisibleContent"
+                     v-else>Показать программу</div>
+            </div>
         </div>
-        <div class="w-full flex">
+        <div class="w-full flex mt-12">
             <div class="border-r border-gray-400 pr-6">
                 <h3 class="text-mainColor-lighter">Программа курса</h3>
                 <div class="w-full mt-4" v-for="item in courseData.syllabus" :key="item.lessionSection">
@@ -29,7 +37,22 @@
     props: ['course'],
     data() {
       return {
-        courseData: this.$route.params.course
+        courseData: this.$route.params.course,
+        showCourseSyllabus: true,
+        showSubscribeForm: false
+      }
+    },
+    methods: {
+      toggleVisibleContent() {
+       if(!this.showSubscribeForm) {
+         this.showCourseSyllabus = false;
+         this.showSubscribeForm = true;
+       } else {
+         this.showSubscribeForm = false;
+         this.showCourseSyllabus = true;
+       }
+
+
       }
     },
     mounted() {
