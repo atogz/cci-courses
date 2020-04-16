@@ -14,14 +14,21 @@
         <div class="w-full flex mt-12">
             <div class="border-r border-gray-400 pr-6">
                 <h3 class="text-mainColor-lighter">Программа курса</h3>
-                <div class="w-full mt-4" v-for="item in courseData.syllabus" :key="item.lessionSection">
-                    <div class="w-full flex flex-col">
-                        <h3 class="text-lg mb-2 font-bold">{{ item.lessonSection.name }}</h3>
-                        <div class="w-full" v-for="lesson in item.lessonSection.lessons" :key="lesson.name">
-                            {{ lesson.lessonName }}
+                <div class="w-full" v-if="courseData.syllabus.length">
+                    <div class="w-full mt-4"  v-for="item in courseData.syllabus" :key="item.lessionSection">
+                        <div class="w-full flex flex-col">
+                            <h3 class="text-lg mb-2 font-bold">{{ item.lessonSection.name }}</h3>
+                            <div class="w-full" v-for="lesson in item.lessonSection.lessons" :key="lesson.name">
+                                {{ lesson.lessonName }}
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="w-full mt-2" v-else>
+                    <span>В разработке...</span>
+                </div>
+
             </div>
             <div class="w-2/3 pl-6">
                 <h3 class="text-mainColor-lighter">Описание курса</h3>
