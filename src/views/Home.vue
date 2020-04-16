@@ -31,6 +31,7 @@ export default {
   name: 'Home',
   components: {
     CoursesGrid
-  }
+  },
+
 }
 </script>

@@ -41,10 +41,9 @@
 <script>
   export default {
     name: "Course",
-    props: ['course'],
     data() {
       return {
-        courseData: this.$route.params.course,
+        courseData: {},
         showCourseSyllabus: true,
         showSubscribeForm: false
       }
@@ -63,7 +62,7 @@
       }
     },
     mounted() {
-      console.log('passed ', this.$route.params);
+      this.courseData = this.$store.getters.getCourseData(Number(this.$route.params.id));
     }
   }
 </script>
