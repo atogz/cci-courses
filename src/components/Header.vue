@@ -10,10 +10,7 @@
                         <span class="course-toggle text-mainColor-lighter hover:text-accentColor cursor-pointer" @click="showCoursesMenu" v-on-clickaway="hideCoursesMenu">Выберите курс</span>
                         <div class="whitespace-no-wrap flex flex-col absolute bg-white border border-gray-300 w-auto mt-2" v-if="coursesMenuVisible">
                             <div id="dropdown-arrow" class="border-t border-gray-300 border-l"></div>
-                            <router-link to="/courses" class="py-2 px-4 mt-2 transition duration-300 ease-in-out hover:bg-gray-300">Социальные сети</router-link>
-                            <router-link to="/courses" class="py-2 px-4 mt-2 transition duration-300 ease-in-out hover:bg-gray-300">Смартфоны</router-link>
-                            <router-link to="/courses" class="py-2 px-4 mt-2 transition duration-300 ease-in-out hover:bg-gray-300">Web-разработка</router-link>
-                            <router-link to="/courses" class="py-2 px-4 mt-2 mb-2 transition duration-300 ease-in-out hover:bg-gray-300">T-SQL</router-link>
+                            <router-link v-for="course in courses" :key="course.id" :to="{ name: 'Course',  params: { id: course.id } }" class="py-2 px-4 mt-2 transition duration-300 ease-in-out hover:bg-gray-300">{{ course.name }}</router-link>
                         </div>
                     </div>
                     <router-link class="ml-6 text-mainColor-lighter hover:text-accentColor"  to="/about">О проекте</router-link>
@@ -33,7 +30,8 @@
     name: "Header.vue",
     data() {
       return {
-        coursesMenuVisible: false
+        coursesMenuVisible: false,
+        courses: []
       }
     },
     methods: {
@@ -43,6 +41,9 @@
       hideCoursesMenu() {
         if(this.coursesMenuVisible) this.coursesMenuVisible = false;
       },
+    },
+    mounted() {
+      this.courses = this.$store.getters.getCourses;
     }
   }
 </script>

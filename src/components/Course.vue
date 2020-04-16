@@ -1,12 +1,12 @@
 <template>
     <div class="w-full p-4">
         <div class="w-full flex justify-center">
-            <div class="px-6 py-4 flex flex-col justify-center">
+            <div class="px-6 py-4 inline-flex flex-col justify-center">
                 <h3 class="text-4xl">Курс "{{ courseData.name }}"</h3>
-                <div class="w-1/2 mx-auto bg-accentColor text-center  mt-4 py-2 text-white rounded cursor-pointer transition duration-300 ease-in-out hover:opacity-75"
+                <div class="mx-auto px-4 py-2 bg-accentColor text-center  mt-4 py-2 text-white rounded cursor-pointer transition duration-300 ease-in-out hover:opacity-75"
                     @click="toggleVisibleContent"
                     v-if="!showSubscribeForm">Записаться</div>
-                <div class="w-1/2 mx-auto bg-accentColor text-center  mt-4 py-2 text-white rounded cursor-pointer transition duration-300 ease-in-out hover:opacity-75"
+                <div class="mx-auto px-4 py-2 bg-accentColor text-center  mt-4 py-2 text-white rounded cursor-pointer transition duration-300 ease-in-out hover:opacity-75"
                      @click="toggleVisibleContent"
                      v-else>Показать программу</div>
             </div>
@@ -63,6 +63,14 @@
     },
     mounted() {
       this.courseData = this.$store.getters.getCourseData(Number(this.$route.params.id));
+    },
+    watch: {
+      '$route.params.id': {
+        handler(newValue) {
+          this.courseData = this.$store.getters.getCourseData(newValue);
+        },
+        immediate: true,
+      }
     }
   }
 </script>
