@@ -9,7 +9,7 @@
                </p>
            </div>
            <div class="px-6 py-4 flex justify-center mt-auto">
-               <div class="bg-accentColor px-4 py-2 text-white rounded cursor-pointer transition duration-300 ease-in-out hover:opacity-75">Записаться</div>
+               <router-link class="bg-accentColor px-4 py-2 text-white rounded cursor-pointer transition duration-300 ease-in-out hover:opacity-75" :to="{ name: 'Course',  params: { id: course.id, course: course } }" >Записаться</router-link>
            </div>
        </div>
    </div>
@@ -26,7 +26,35 @@
             id: 1,
             name: 'Социальные сети',
             description: 'Начальных знаний не требуется. Научим как правильно и эффективно работать в соц. сетях.',
-            backgroundImage: require('../assets/img/social-networks.png')
+            backgroundImage: require('../assets/img/social-networks.png'),
+            syllabus: [
+              {
+                lessonSection: {
+                  name: 'Секция 1',
+                  lessons: [
+                    {
+                      lessonName: 'Урок 1 Секции 1 Урок 1 Секции 1 Урок 1 Секции 1',
+                    },
+                    {
+                      lessonName: 'Урок 2 Секции 1',
+                    },
+                  ]
+                },
+              },
+              {
+                lessonSection: {
+                  name: 'Секция 2',
+                  lessons: [
+                    {
+                      lessonName: 'Урок 1 Секции 2',
+                    },
+                    {
+                      lessonName: 'Урок 2 Секции 2',
+                    },
+                  ]
+                },
+              },
+            ]
           },
           {
             id: 2,

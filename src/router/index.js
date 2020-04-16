@@ -20,6 +20,12 @@ Vue.use(VueRouter)
     name: 'Courses',
     component: () => import(/* webpackChunkName: "about" */ '../views/Courses.vue')
   },
+    {
+      path: '/courses/:id',
+      name: 'Course',
+      props: true,
+      component: () => import(/* webpackChunkName: "about" */ '../components/Course.vue')
+    },
   {
     path: '/teaching',
     name: 'Teaching',
