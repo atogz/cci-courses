@@ -1,11 +1,16 @@
 <template>
-    <h1>Курсы</h1>
+    <CoursesGrid />
 </template>
 
 
 <script>
+  import CoursesGrid from "../components/CoursesGrid.vue";
+
   export default {
-    name: "Courses"
+    name: "Courses",
+    components: {
+      CoursesGrid
+    }
   }
 </script>
 
