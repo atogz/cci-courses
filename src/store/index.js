@@ -125,6 +125,47 @@ export default new Vuex.Store({
               ]
             },
           },
+          {
+            lessonSection: {
+              name: 'Работа со значениями NULL',
+              lessons: [
+                {
+                  lessonName: 'Что такое значение NULL. Особенности работы со значениями NULL',
+                },
+                {
+                  lessonName: 'NULL и Сравнение "не равно"',
+                },
+                {
+                  lessonName: 'IN и NOT IN при наличии значений NULL',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Агрегация - GROUP BY, HAVING, DISTINCT',
+              lessons: [
+                {
+                  lessonName: 'Группировка данных GROUP BY',
+                },
+                {
+                  lessonName: 'Фильтрация HAVING',
+                },
+                {
+                  lessonName: 'Агрегация SUM и COUNT',
+                },
+                {
+                  lessonName: 'Другие функции агрегации',
+                },
+                {
+                  lessonName: 'Различные значения DISTINCT',
+                },
+                {
+                  lessonName: 'Сортировка данных ORDER BY',
+                },
+              ]
+            },
+          },
         ]
       },
     ]
