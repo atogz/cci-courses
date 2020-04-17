@@ -79,7 +79,7 @@
     mounted() {
       this.courseData = this.$store.getters.getCourseData(Number(this.$route.params.id));
       this.rendered = true;
-      window.scrollTo(0,0);
+      //window.scrollTo(0,0);
     },
     watch: {
       '$route.params.id': {
