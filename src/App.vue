@@ -34,6 +34,9 @@ export default {
         background-color: #f5f7fb;
         font-family: 'Rubik', 'Roboto', sans-serif;
     }
+    li {
+        list-style: disc;
+    }
     #app {
         height: 100%;
         display: flex;
