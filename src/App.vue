@@ -42,7 +42,7 @@ export default {
     @media screen and (min-width: 1400px) {
         .container {
             width: 1600px;
-            margin: auto;
+            margin: 0 auto;
         }
     }
 
