@@ -20,7 +20,7 @@
                             <div class="w-full" v-if="courseData.syllabus.length">
                                 <div class="w-full mt-4"  v-for="item in courseData.syllabus" :key="item.lessionSection">
                                     <div class="w-full flex flex-col">
-                                        <h3 class="font-bold" @click="expandLessonSection(item.lessonSection.name)">{{ item.lessonSection.name }} <img class="inline ml-1 transition duration-300 ease-in-out" :class="{'rotated': sectionExpanded == item.lessonSection.name}" :src="require('../assets/img/down-arrow.png')" @click="expandLessonSection(item.lessonSection.name)"/></h3>
+                                        <h3 class="font-bold cursor-pointer" @click="expandLessonSection(item.lessonSection.name)">{{ item.lessonSection.name }} <img class="inline ml-1 transition duration-300 ease-in-out" :class="{'rotated': sectionExpanded == item.lessonSection.name}" :src="require('../assets/img/down-arrow.png')" @click="expandLessonSection(item.lessonSection.name)"/></h3>
                                         <div class="w-full" v-if="sectionExpanded === item.lessonSection.name && sectionExpanded !== null">
                                             <div class="w-full mt-1 border-b border-gray-300" v-for="lesson in item.lessonSection.lessons" :key="lesson.name">
                                                 {{ lesson.lessonName }}
