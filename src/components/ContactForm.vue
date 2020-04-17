@@ -12,7 +12,7 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-phone-number">
                     Телефон
                 </label>
-                <input class="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3  leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-phone-number" type="tel" placeholder="+7(495)111-11-11" v-model="customerEmail" :class="{'border border-red-500': errors.includes('phone')}">
+                <input class="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3  leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-phone-number" type="tel" placeholder="+7(495)111-11-11" v-model="customerPhoneNumber" :class="{'border border-red-500': errors.includes('phone')}">
                 <p class="text-red-500 text-xs italic" v-if="errors.includes('phone')">Пожалуйста, заполните это поле</p>
             </div>
         </div>
