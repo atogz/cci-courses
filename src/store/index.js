@@ -66,7 +66,7 @@ export default new Vuex.Store({
         syllabus: [
           {
             lessonSection: {
-              name: 'Введние. Обзор языка SQL',
+              name: 'Введение. Обзор языка SQL',
               lessons: [
                 {
                   lessonName: 'Обзор языка SQL',
@@ -162,6 +162,129 @@ export default new Vuex.Store({
                 },
                 {
                   lessonName: 'Сортировка данных ORDER BY',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Соединение таблиц - INNER, OUTER, CROSS, SELF JOIN',
+              lessons: [
+                {
+                  lessonName: 'INNER JOIN - Внутреннее Соединение Таблиц',
+                },
+                {
+                  lessonName: 'Соединение Нескольких Таблиц',
+                },
+                {
+                  lessonName: 'Дубликаты Строк, Нехватка Строк',
+                },
+                {
+                  lessonName: 'LEFT OUTER JOIN - Левое Внешнее Соединение',
+                },
+                {
+                  lessonName: 'Различные варианты синтаксиса',
+                },
+                {
+                  lessonName: 'RIGHT OUTER JOIN- Правое Внешнее Соединение',
+                },
+                {
+                  lessonName: 'FULL OUTER JOIN - Полное внешнее соединение',
+                },
+                {
+                  lessonName: 'SELF JOIN - Соединение таблицы самой с собой',
+                },
+                {
+                  lessonName: 'CROSS JOIN - Декартово Произведение Таблиц',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Операторы множеств - UNION, EXCEPT (MINUS) и INTERSECT',
+              lessons: [
+                {
+                  lessonName: 'UNION - Объединение множеств строк',
+                },
+                {
+                  lessonName: 'EXCEPT (MINUS) - Вычитание множеств строк',
+                },
+                {
+                  lessonName: 'INTERSECT - Пересечение множеств строк',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Функции и операторы',
+              lessons: [
+                {
+                  lessonName: 'Обзор функций и операторов',
+                },
+                {
+                  lessonName: 'Для числовых типов данных',
+                },
+                {
+                  lessonName: 'LIKE для поиска шаблонов',
+                },
+                {
+                  lessonName: 'Для символьных типов данных',
+                },
+                {
+                  lessonName: 'Для типов данных даты и времени',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Изменение данных - INSERT, UPDATE, DELETE',
+              lessons: [
+                {
+                  lessonName: 'INSERT - Вставка данных',
+                },
+                {
+                  lessonName: 'UPDATE - Обновление данных',
+                },
+                {
+                  lessonName: 'DELETE - Удаление данных',
+                },
+                {
+                  lessonName: 'Поиск расхождений между таблицами',
+                },
+                {
+                  lessonName: 'Устранение расхождений между таблицами',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Дополнительные темы: CASE, рекурсия',
+              lessons: [
+                {
+                  lessonName: 'CASE: два варианта синтаксиса',
+                },
+                {
+                  lessonName: 'CASE: полезные примеры',
+                },
+                {
+                  lessonName: 'Как можно переписать IN / NOT IN на OUTER JOIN + CASE',
+                },
+                {
+                  lessonName: 'Рекурсивные Запросы',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Резюме курса',
+              lessons: [
+                {
+                  lessonName: 'Резюме курса',
                 },
               ]
             },
