@@ -42,7 +42,7 @@
 
             <transition name="component-fade" mode="out-in">
                 <div class="w-full flex mt-12" v-if="showSubscribeForm">
-                    contact form
+                    <ContactForm :courseName="courseData.name"/>
                 </div>
             </transition>
 
@@ -53,8 +53,13 @@
 </template>
 
 <script>
+  import ContactForm from "./ContactForm.vue";
+
   export default {
     name: "Course",
+    components: {
+      ContactForm
+    },
     data() {
       return {
         rendered: false,
@@ -79,12 +84,13 @@
     mounted() {
       this.courseData = this.$store.getters.getCourseData(Number(this.$route.params.id));
       this.rendered = true;
-      //window.scrollTo(0,0);
     },
     watch: {
       '$route.params.id': {
         handler(newValue) {
           this.rendered = false;
+          this.showCourseSyllabus = true;
+          this.showSubscribeForm = false;
           this.courseData = this.$store.getters.getCourseData(newValue);
           this.$nextTick(() => {
             this.rendered = true;
