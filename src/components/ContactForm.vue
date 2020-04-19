@@ -36,7 +36,7 @@
         </div>
         <div class="md:flex md:items-center">
             <div class="md:w-1/3">
-                <button class="shadow bg-accentColor transition duration-300 ease-in-out hover:opacity-75 focus:shadow-outline focus:outline-none text-white py-2 px-4 rounded" type="button" @click="validateForm">
+                <button class="shadow bg-accentColor transition duration-300 ease-in-out hover:opacity-75 focus:shadow-outline focus:outline-none text-white py-2 px-4 rounded" type="button" @click="sendMail">
                     Отправить
                 </button>
             </div>
@@ -46,6 +46,7 @@
 </template>
 
 <script>
+  import axios from 'axios'
   export default {
     name: "ContactForm",
     props: ['courseName', 'type'],
@@ -73,10 +74,27 @@
         if(!this.customerMessage.length) {
           this.errors.push('message');
         }
+
       },
       sendMail() {
-        
-      }
+        this.validateForm();
+        if(!this.errors.length) {
+          return axios.post('/api/mail.php', {
+            customerName: this.customerName,
+            phoneNumber: this.customerPhoneNumber,
+            email: this.customerEmail,
+            messageType: this.messageType,
+            message: this.message
+          })
+            .then(function (response) {
+              console.log(response);
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        }
+        }
+
     },
     mounted() {
       if(this.type === "courseSubscribe") {
