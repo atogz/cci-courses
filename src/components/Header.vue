@@ -27,13 +27,13 @@
                 </div>
                 <img class="p-4" :src="require('../assets/img/menu.png')" @click="showMobileMenu = !showMobileMenu"/>
                 <div class="w-full flex flex-col mt-4" v-if="showMobileMenu">
-                    <span class="course-toggle w-full p-4 text-center uppercase text-xl text-mainColor-lighter hover:text-accentColor cursor-pointer lg:normal-case" @click="toggleMobileCoursesMenu">Выберите курс</span>
+                    <span class="course-toggle w-full p-4 text-center uppercase text-lg text-mainColor-lighter hover:text-accentColor cursor-pointer lg:normal-case" @click="toggleMobileCoursesMenu">Выберите курс</span>
                     <div class="whitespace-no-wrap flex flex-col bg-white border border-gray-300 w-auto mt-2" v-if="coursesMenuVisible">
                         <router-link v-for="course in courses" :key="course.id" :to="{ name: 'Course',  params: { id: course.id } }" class="py-2 px-4 mt-2 transition duration-300 uppercase text-center ease-in-out hover:bg-gray-300"><span @click="showMobileMenu = false, coursesMenuVisible = false">{{ course.name }}</span></router-link>
                     </div>
-                    <router-link class="w-full p-4 text-center uppercase text-xl  text-mainColor-lighter hover:text-accentColor"  to="/about"><span @click="showMobileMenu = false, coursesMenuVisible = false">О проекте</span></router-link>
-                    <router-link class="w-full p-4 text-center uppercase text-xl  text-mainColor-lighter hover:text-accentColor"  to="/teaching"><span @click="showMobileMenu = false, coursesMenuVisible = false">Есть чему научить?</span></router-link>
-                    <router-link class="w-full p-4 text-center uppercase text-xl  text-mainColor-lighter hover:text-accentColor" to="/contacts"><span @click="showMobileMenu = false, coursesMenuVisible = false">Контакты</span></router-link>
+                    <router-link class="w-full p-4 text-center uppercase text-lg  text-mainColor-lighter hover:text-accentColor"  to="/about"><span @click="showMobileMenu = false, coursesMenuVisible = false">О проекте</span></router-link>
+                    <router-link class="w-full p-4 text-center uppercase text-lg  text-mainColor-lighter hover:text-accentColor"  to="/teaching"><span @click="showMobileMenu = false, coursesMenuVisible = false">Есть чему научить?</span></router-link>
+                    <router-link class="w-full p-4 text-center uppercase text-lg  text-mainColor-lighter hover:text-accentColor" to="/contacts"><span @click="showMobileMenu = false, coursesMenuVisible = false">Контакты</span></router-link>
                 </div>
             </nav>
         </div>
