@@ -46,7 +46,7 @@
 
                 <transition name="component-fade" mode="out-in">
                     <div class="w-full flex mt-12" v-if="showSubscribeForm">
-                        <ContactForm :courseName="courseData.name"/>
+                        <ContactForm :courseName="courseData.name" type="courseSubscribe"/>
                     </div>
                 </transition>
             </div>

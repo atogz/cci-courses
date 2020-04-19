@@ -48,13 +48,13 @@
 <script>
   export default {
     name: "ContactForm",
-    props: ['courseName'],
+    props: ['courseName', 'type'],
     data() {
       return {
         customerName: "",
         customerPhoneNumber: "",
         customerEmail: "",
-        customerMessage: `Добрый день! Мне интересно пройти обучению по курсу "${this.courseName}".`,
+        customerMessage: "",
         errors: []
       }
     },
@@ -74,6 +74,17 @@
           this.errors.push('message');
         }
       },
+    },
+    mounted() {
+      if(this.type === "courseSubscribe") {
+        this.customerMessage = `Добрый день! Мне интересно пройти обучению по курсу "${this.courseName}".`
+      }
+      else if(this.type === "teaching") {
+        this.customerMessage = 'Добрый день! Я бы хотел стать преподавателем. Пожалуйста, свяжитесь со мной для обсуждения.'
+      }
+      else if(this.type === "contactsPage") {
+        this.customerMessage = 'Добрый день! У меня есть вопрос: ';
+      }
     }
   }
 </script>
