@@ -74,6 +74,9 @@
           this.errors.push('message');
         }
       },
+      sendMail() {
+        
+      }
     },
     mounted() {
       if(this.type === "courseSubscribe") {
