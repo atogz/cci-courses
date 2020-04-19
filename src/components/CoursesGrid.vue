@@ -1,5 +1,5 @@
 <template>
-   <div class="w-full grid grid-cols-4 gap-5 mt-12">
+   <div class="w-full grid grid-cols-1 gap-5 mt-12 lg:grid-cols-4">
        <div class="rounded overflow-hidden shadow-lg pb-2 flex flex-col" v-for="course in courses" :key="course.id">
            <img class="w-full" :src="course.backgroundImage" alt="Sunset in the mountains">
            <div class="px-6 py-4">

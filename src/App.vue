@@ -42,10 +42,13 @@ export default {
         display: flex;
         flex-direction: column;
     }
+    .container {
+        margin: 0 auto;
+    }
+    
     @media screen and (min-width: 1400px) {
         .container {
             width: 1600px;
-            margin: 0 auto;
         }
     }
 
