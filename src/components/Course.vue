@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <transition name="component-fade" mode="out-in">
-                    <div class="w-full flex flex-wrap mt-12 lg:flex-no-wrap" v-if="showCourseSyllabus">
+                    <div class="w-full flex flex-wrap mt-12 justify-center lg:flex-no-wrap" v-if="showCourseSyllabus">
                         <div class="w-full border-gray-400  order-last mt-12 uppercase lg:w-auto lg:order-first lg:mt-0 lg:normal-case lg:border-r lg:pr-6">
                             <h3 class="text-mainColor-lighter">Программа курса</h3>
                             <div class="w-full" v-if="courseData.syllabus.length">
@@ -45,7 +45,7 @@
                 </transition>
 
                 <transition name="component-fade" mode="out-in">
-                    <div class="w-full flex mt-12" v-if="showSubscribeForm">
+                    <div class="w-full flex mt-12 justify-center" v-if="showSubscribeForm">
                         <ContactForm :courseName="courseData.name" type="courseSubscribe"/>
                     </div>
                 </transition>
