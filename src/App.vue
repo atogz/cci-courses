@@ -38,14 +38,14 @@ export default {
         list-style: disc;
     }
     #app {
-        height: 100%;
+        min-height: 100%;
         display: flex;
         flex-direction: column;
     }
     .container {
         margin: 0 auto;
     }
-    
+
     @media screen and (min-width: 1400px) {
         .container {
             width: 1600px;
