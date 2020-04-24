@@ -1,6 +1,6 @@
 <template>
     <transition name="component-fade">
-        <div class="container"  v-if="rendered">
+        <div class="container pb-12"  v-if="rendered">
             <div class="w-full p-4">
                 <div class="w-full flex justify-center">
                     <div class="px-6 py-4 inline-flex flex-col justify-center">
