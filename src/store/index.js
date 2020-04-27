@@ -34,30 +34,112 @@ export default new Vuex.Store({
         id: 3,
         name: 'Web-разработка',
         description: 'Начальных знаний не требуется. Вперед, научим вас делать классные web-страницы!',
+        fullDescription: '<p>На этом курсе вы узнаете как работает интернет, научишься создавать сайты с помощью HTML и CSS и размещать их в сети. Попутно освоите основные инструменты веб-разработчика: редактор кода, отладчик, Google.</p><br/>\n' +
+          '\n' +
+          '<p>Не бойтесь страшных непонятных слов! Курс создан специально для людей, которые никогда не программировали и ничего не знают о работе интернета.</p> <br/><p>Вы научитесь верстать сайты на HTML и CSS, изучите JavaScript, сможете разрабатывать на PHP серверную часть сайта — и сделаете первые проекты для портфолио.</p>',
         backgroundImage: require('../assets/img/webdev.png'),
         syllabus: [
           {
             lessonSection: {
-              name: 'Секция 1',
+              name: 'Веб-вёрстка',
               lessons: [
                 {
-                  lessonName: 'Урок 1 Секции 1 Урок 1 Секции 1 Урок 1 Секции 1',
+                  lessonName: 'Вводный модуль',
                 },
                 {
-                  lessonName: 'Урок 2 Секции 1',
+                  lessonName: 'HTML',
+                },
+                {
+                  lessonName: 'Основы CSS',
+                },
+                {
+                  lessonName: 'Инструменты разработчика',
+                },
+                {
+                  lessonName: 'Адаптивность и кроассбраузерность',
+                },
+                {
+                  lessonName: 'Основы JavaScript',
+                },
+                {
+                  lessonName: 'Оформление',
+                },
+                {
+                  lessonName: 'Advanced CSS',
                 },
               ]
             },
           },
           {
             lessonSection: {
-              name: 'Секция 2',
+              name: 'JavaScript',
               lessons: [
                 {
-                  lessonName: 'Урок 1 Секции 2',
+                  lessonName: 'Знакомство с языком',
                 },
                 {
-                  lessonName: 'Урок 2 Секции 2',
+                  lessonName: 'Основы',
+                },
+                {
+                  lessonName: 'Функции',
+                },
+                {
+                  lessonName: 'Массивы и объекты',
+                },
+                {
+                  lessonName: 'Замыкания',
+                },
+                {
+                  lessonName: 'Объекты и конструкторы',
+                },
+                {
+                  lessonName: 'Объектно-ориентированное программирование',
+                },
+                {
+                  lessonName: 'JavaScript в браузере, DOM',
+                },
+                {
+                  lessonName: 'Web API',
+                },
+                {
+                  lessonName: 'Клиент и сервер',
+                },
+                {
+                  lessonName: 'jQuery',
+                },
+                {
+                  lessonName: 'Современный JavaScript, ES2015',
+                },
+                {
+                  lessonName: 'Введение в концепцию реактивных фреймворков, Vue.js',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'PHP',
+              lessons: [
+                {
+                  lessonName: 'Введение в программирование',
+                },
+                {
+                  lessonName: 'Структура управления данными. Базовые концепции PHP 7',
+                },
+                {
+                  lessonName: 'Протокол HTTP/HTTPS',
+                },
+                {
+                  lessonName: 'Пользовательские функции',
+                },
+                {
+                  lessonName: 'Файлы и каталоги',
+                },
+                {
+                  lessonName: 'Cookie/Session',
+                },
+                {
+                  lessonName: 'База данных MySQL',
                 },
               ]
             },
