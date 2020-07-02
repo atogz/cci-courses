@@ -393,6 +393,340 @@ export default new Vuex.Store({
         backgroundImage: require('../assets/img/english-course.png'),
         syllabus: []
       },
+      {
+        id: 6,
+        name: 'Профессиональная Web-разработка',
+        description: 'Курс продвинутой разработки PHP,  ООП и Symfony. Требования: Для прохождения курса необходимо уверенно владеть базовым синтаксисом PHP и иметь представление о работе с SQL.',
+        fullDescription: '<p>Чем отличается Senior от Middle? Или Middle от Junior? Есть ли задачи, которые может сделать только опытный разработчик? Практика показывает, что любую задачу может выполнить программист любого уровня. Зачем же тогда глубоко изучать инструмент? Ответ очень прост: качество и скорость.</p><br/>' +
+          '<p>В данном курсе вы познакомитесь с общепринятыми правилами и рекомендациями, которые применяются во всех областях и для всех языков программирования. Углубитесь в ООП возможности языка программирования PHP, изучите современные инструменты разработки веб-сайтов, а так же, один из самых популярных фреймворков - Symfony 5.</p><br/>' +
+          '<p>По завершению курса, вы будете создавать качественные, масштабируемые веб-проекты, в несколько десятков раз быстрее, чем могли это делать ранее.</p>',
+        backgroundImage: require('../assets/img/php7.png'),
+        syllabus: [
+          {
+            lessonSection: {
+              name: 'Основы',
+              lessons: [
+                {
+                  lessonName: 'Типизация в PHP7+',
+                },
+                {
+                  lessonName: 'Анонимные функции и замыкания',
+                },
+                {
+                  lessonName: 'Классы',
+                },
+                {
+                  lessonName: 'Интерфейсы',
+                },
+                {
+                  lessonName: 'Абстрактные классы',
+                },
+                {
+                  lessonName: 'Наследование',
+                },
+                {
+                  lessonName: 'Композиция',
+                },
+                {
+                  lessonName: 'Агрегация',
+                },
+                {
+                  lessonName: 'Трейты',
+                },
+                {
+                  lessonName: 'Пространства имен',
+                },
+                {
+                  lessonName: 'PSR',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'UML',
+              lessons: [
+                {
+                  lessonName: 'Что такое UML?',
+                },
+                {
+                  lessonName: 'Диаграмма прецедентов',
+                },
+                {
+                  lessonName: 'Диаграмма активности',
+                },
+                {
+                  lessonName: 'Диаграмма классов',
+                },
+                {
+                  lessonName: 'Диаграмма последовательностей',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Архитектура',
+              lessons: [
+                {
+                  lessonName: 'Принципы SOLID',
+                },
+                {
+                  lessonName: 'Введение в паттерны',
+                },
+                {
+                  lessonName: 'Порождающие паттерны (5)',
+                },
+                {
+                  lessonName: 'Структурные паттерны (7)',
+                },
+                {
+                  lessonName: 'Поведенческие паттерны (10)',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Composer',
+              lessons: [
+                {
+                  lessonName: 'Установка библиотек',
+                },
+                {
+                  lessonName: 'Управление версиями',
+                },
+                {
+                  lessonName: 'Сервис packagist.org',
+                },
+                {
+                  lessonName: 'Обновление зависимостей',
+                },
+                {
+                  lessonName: 'Автоматическое подключение классов',
+                },
+                {
+                  lessonName: 'Создание своей библиотеки',
+                },
+                {
+                  lessonName: 'Публикация своей библиотеки',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'PHPUnit',
+              lessons: [
+                {
+                  lessonName: 'Введение в тестирование',
+                },
+                {
+                  lessonName: 'Создание и настройка TestSuite',
+                },
+                {
+                  lessonName: 'Юнит-тестирование',
+                },
+                {
+                  lessonName: 'Макеты',
+                },
+                {
+                  lessonName: 'Работа с исключениями',
+                },
+                {
+                  lessonName: 'Аннотации PHPUnit',
+                },
+                {
+                  lessonName: 'Оценка покрытия',
+                },
+                {
+                  lessonName: 'TDD',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Symfony. Основы',
+              lessons: [
+                {
+                  lessonName: 'Что такое Symfony?',
+                },
+                {
+                  lessonName: 'Создание проекта',
+                },
+                {
+                  lessonName: 'Обзор структуры',
+                },
+                {
+                  lessonName: 'Конфигурация окружения',
+                },
+                {
+                  lessonName: 'Управление сервером',
+                },
+                {
+                  lessonName: 'Контроллеры',
+                },
+                {
+                  lessonName: 'Роутинг',
+                },
+                {
+                  lessonName: 'Twig. Базовый синтаксис',
+                },
+                {
+                  lessonName: 'Сущности и репозитории',
+                },
+                {
+                  lessonName: 'Отношения сущностей',
+                },
+                {
+                  lessonName: 'Doctrine. Основы',
+                },
+                {
+                  lessonName: 'Сервисы',
+                },
+                {
+                  lessonName: 'Dependency Injection',
+                },
+                {
+                  lessonName: 'События',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Symfony. Формы',
+              lessons: [
+                {
+                  lessonName: 'Работа с формами',
+                },
+                {
+                  lessonName: 'Типы данных',
+                },
+                {
+                  lessonName: 'Валидация',
+                },
+                {
+                  lessonName: 'Формы и Twig',
+                },
+                {
+                  lessonName: 'Оформление форм',
+                },
+                {
+                  lessonName: 'Обработка форм',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Symfony. Панель администратора',
+              lessons: [
+                {
+                  lessonName: 'Установка EasyAdmin',
+                },
+                {
+                  lessonName: 'Добавление сущностей',
+                },
+                {
+                  lessonName: 'Настройка списков',
+                },
+                {
+                  lessonName: 'Настройка форм',
+                },
+                {
+                  lessonName: 'Типы данных',
+                },
+                {
+                  lessonName: 'Настройка внешнего вида',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Symfony. Безопасность',
+              lessons: [
+                {
+                  lessonName: 'UserInterface',
+                },
+                {
+                  lessonName: 'Шифрование паролей',
+                },
+                {
+                  lessonName: 'Генерация формы авторизации',
+                },
+                {
+                  lessonName: 'Собственный обработчик авторизации',
+                },
+                {
+                  lessonName: 'Управление доступами',
+                },
+                {
+                  lessonName: 'OAuth2',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Symfony. Консоль',
+              lessons: [
+                {
+                  lessonName: 'Обзор возможностей консоли',
+                },
+                {
+                  lessonName: 'Базовые команды',
+                },
+                {
+                  lessonName: 'Создание своих команд',
+                },
+                {
+                  lessonName: 'Конфигурирование',
+                },
+                {
+                  lessonName: 'Уровни вывода',
+                },
+              ]
+            },
+          },
+          {
+            lessonSection: {
+              name: 'Symfony. REST',
+              lessons: [
+                {
+                  lessonName: 'Введение в API-Platform',
+                },
+                {
+                  lessonName: 'Swagger',
+                },
+                {
+                  lessonName: 'json-ld',
+                },
+                {
+                  lessonName: 'Управление методами',
+                },
+                {
+                  lessonName: 'Представления данных',
+                },
+                {
+                  lessonName: 'Дочерние ресурсы',
+                },
+                {
+                  lessonName: 'Пред-обработка ресурсов',
+                },
+                {
+                  lessonName: 'Валидация',
+                },
+                {
+                  lessonName: 'Доступы',
+                },
+              ]
+            },
+          },
+        ]
+      },
 
     ]
   },
