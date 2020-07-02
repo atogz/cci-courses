@@ -1,6 +1,6 @@
 <template>
     <transition name="component-fade">
-        <div class="container"  v-if="rendered">
+        <div class="container pb-12"  v-if="rendered">
             <div class="w-full p-4">
                 <div class="w-full flex justify-center">
                     <div class="px-6 py-4 inline-flex flex-col justify-center">
@@ -15,17 +15,20 @@
                 </div>
                 <transition name="component-fade" mode="out-in">
                     <div class="w-full flex flex-wrap mt-12 lg:flex-no-wrap" v-if="showCourseSyllabus">
-                        <div class="w-full border-gray-400  order-last mt-12 uppercase lg:w-auto lg:order-first lg:mt-0 lg:normal-case lg:border-r lg:pr-6">
+                        <div class="border-gray-400 order-last mt-12 uppercase lg:w-auto lg:order-first lg:mt-0 lg:normal-case lg:border-r lg:pr-6">
                             <h3 class="text-mainColor-lighter">Программа курса</h3>
                             <div class="w-full" v-if="courseData.syllabus.length">
-                                <div class="w-full mt-4"  v-for="item in courseData.syllabus" :key="item.lessionSection">
+                                <div class="w-full mt-4" v-for="item in courseData.syllabus" :key="item.lessionSection">
                                     <div class="w-full flex flex-col">
                                         <h3 class="font-bold cursor-pointer" @click="expandLessonSection(item.lessonSection.name)">{{ item.lessonSection.name }} <img class="inline ml-1 transition duration-300 ease-in-out" :class="{'rotated': sectionExpanded == item.lessonSection.name}" :src="require('../assets/img/down-arrow.png')" @click="expandLessonSection(item.lessonSection.name)"/></h3>
-                                        <div class="w-full" v-if="sectionExpanded === item.lessonSection.name && sectionExpanded !== null">
-                                            <div class="w-full mt-1 p-2 border-b border-gray-300 lg:p-0" v-for="lesson in item.lessonSection.lessons" :key="lesson.name">
-                                                {{ lesson.lessonName }}
+                                        <transition name="component-fade">
+                                            <div class="w-full" v-if="sectionExpanded === item.lessonSection.name && sectionExpanded !== null">
+                                                <div class="w-full mt-1 p-2 border-b border-gray-300 lg:p-0" v-for="lesson in item.lessonSection.lessons" :key="lesson.name">
+                                                    {{ lesson.lessonName }}
+                                                </div>
                                             </div>
-                                        </div>
+                                        </transition>
+
 
                                     </div>
                                 </div>
