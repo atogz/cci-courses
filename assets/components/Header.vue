@@ -51,8 +51,7 @@
         coursesMenuVisible: false,
         courses: [],
         showMobileMenu: false,
-        isMobile: false,
-        logo: null
+        isMobile: false
       }
     },
     methods: {
