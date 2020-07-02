@@ -4,7 +4,7 @@
             <nav class="w-full hidden lg:flex">
                 <div class="flex justify-between items-center">
                     <router-link to="/">
-                        <img src="../assets/img/logo.png">
+                        <img :src="require('../assets/img/logo.png').default">
                     </router-link>
                     <div class="ml-8">
                         <span class="course-toggle text-mainColor-lighter hover:text-accentColor cursor-pointer" @click="showCoursesMenu(false)" v-on-clickaway="hideCoursesMenu">Выберите курс</span>
@@ -52,6 +52,7 @@
         courses: [],
         showMobileMenu: false,
         isMobile: false,
+        logo: null
       }
     },
     methods: {
